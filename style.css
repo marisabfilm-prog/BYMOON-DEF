@@ -1,0 +1,403 @@
+/* VARIABLES COLORES CORPORATIVOS */
+:root {
+
+    --clr-corporativo-blanco: hsla(0, 0%, 100%, 1);
+
+    --clr-corporativo-fondo-dark: rgb(18, 8, 35);
+
+    --clr-corporativo-primario: hsla(261, 48%, 21%, 1);
+    --clr-corporativo-primario-rosa-oscuro: hsl(287, 46%, 25%, 1);
+    --clr-corporativo-primario-lila: hsl(260, 30%, 83%, 1);
+
+    --clr-corporativo-secundario-rosa-medio: hsl(294, 33%, 45%, 1);
+    --clr-corporativo-secundario-rosa-claro: hsl(315, 39%, 72%, 1);
+    --clr-corporativo-secundario-melocotón: hsl(24, 82%, 85%, 1);
+
+
+    --clr-corporativo-lavanda: hsla(268, 33%, 78%, 1);
+
+
+    /* Variables de transparencia (Alpha) */
+    --clr-corporativo-lavanda-low: hsla(268, 33%, 78%, 0.3);
+    --clr-corporativo-luna-glow: hsla(39, 100%, 86%, 0.3);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--clr-corporativo-blanco);
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Capa 1: pequeñas y lentas → parecen lejanas */
+.estrellas-1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow:
+        120px 80px 0 hsla(268, 33%, 78%, 0.6),
+        340px 45px 0 hsla(39, 100%, 86%, 0.4),
+        560px 120px 0 hsla(268, 33%, 78%, 0.7),
+        780px 30px 0 hsla(39, 100%, 86%, 0.5),
+        200px 200px 0 hsla(268, 33%, 78%, 0.5),
+        450px 180px 0 hsla(39, 100%, 86%, 0.6),
+        670px 220px 0 hsla(268, 33%, 78%, 0.4),
+        900px 90px 0 hsla(39, 100%, 86%, 0.5),
+        1100px 150px 0 hsla(268, 33%, 78%, 0.6),
+        1300px 60px 0 hsla(39, 100%, 86%, 0.4),
+        80px 320px 0 hsla(268, 33%, 78%, 0.5),
+        290px 380px 0 hsla(39, 100%, 86%, 0.7),
+        510px 340px 0 hsla(268, 33%, 78%, 0.4),
+        730px 400px 0 hsla(39, 100%, 86%, 0.6),
+        950px 360px 0 hsla(268, 33%, 78%, 0.5),
+        1150px 420px 0 hsla(39, 100%, 86%, 0.4),
+        1350px 310px 0 hsla(268, 33%, 78%, 0.6),
+        60px 520px 0 hsla(39, 100%, 86%, 0.5),
+        270px 560px 0 hsla(268, 33%, 78%, 0.7),
+        490px 500px 0 hsla(39, 100%, 86%, 0.4),
+        710px 580px 0 hsla(268, 33%, 78%, 0.6),
+        930px 540px 0 hsla(39, 100%, 86%, 0.5),
+        1130px 610px 0 hsla(268, 33%, 78%, 0.4),
+        1330px 480px 0 hsla(39, 100%, 86%, 0.6),
+        160px 680px 0 hsla(268, 33%, 78%, 0.5),
+        380px 720px 0 hsla(39, 100%, 86%, 0.7),
+        600px 660px 0 hsla(268, 33%, 78%, 0.4),
+        820px 740px 0 hsla(39, 100%, 86%, 0.5),
+        1040px 700px 0 hsla(268, 33%, 78%, 0.6),
+        1240px 780px 0 hsla(39, 100%, 86%, 0.4),
+        40px 840px 0 hsla(268, 33%, 78%, 0.5),
+        260px 900px 0 hsla(39, 100%, 86%, 0.6),
+        480px 860px 0 hsla(268, 33%, 78%, 0.4),
+        700px 920px 0 hsla(39, 100%, 86%, 0.7),
+        920px 880px 0 hsla(268, 33%, 78%, 0.5),
+        1120px 940px 0 hsla(39, 100%, 86%, 0.4),
+        1320px 820px 0 hsla(268, 33%, 78%, 0.6),
+        190px 1020px 0 hsla(39, 100%, 86%, 0.5),
+        410px 1060px 0 hsla(268, 33%, 78%, 0.7),
+        630px 1000px 0 hsla(39, 100%, 86%, 0.4),
+        850px 1080px 0 hsla(268, 33%, 78%, 0.5),
+        1050px 1040px 0 hsla(39, 100%, 86%, 0.6),
+        1250px 1100px 0 hsla(268, 33%, 78%, 0.4);
+    animation: flotar-1 7s ease-in-out infinite;
+}
+
+/* Capa 2: medianas y velocidad media */
+.estrellas-2 {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow:
+        220px 110px 0 hsla(39, 100%, 86%, 0.7),
+        490px 55px 0 hsla(268, 33%, 78%, 0.8),
+        750px 170px 0 hsla(39, 100%, 86%, 0.5),
+        1010px 80px 0 hsla(268, 33%, 78%, 0.7),
+        170px 290px 0 hsla(39, 100%, 86%, 0.6),
+        440px 330px 0 hsla(268, 33%, 78%, 0.5),
+        700px 270px 0 hsla(39, 100%, 86%, 0.8),
+        960px 350px 0 hsla(268, 33%, 78%, 0.6),
+        1220px 210px 0 hsla(39, 100%, 86%, 0.5),
+        100px 470px 0 hsla(268, 33%, 78%, 0.7),
+        370px 510px 0 hsla(39, 100%, 86%, 0.6),
+        630px 450px 0 hsla(268, 33%, 78%, 0.5),
+        890px 530px 0 hsla(39, 100%, 86%, 0.8),
+        1150px 490px 0 hsla(268, 33%, 78%, 0.6),
+        250px 650px 0 hsla(39, 100%, 86%, 0.5),
+        520px 690px 0 hsla(268, 33%, 78%, 0.7),
+        780px 630px 0 hsla(39, 100%, 86%, 0.6),
+        1040px 710px 0 hsla(268, 33%, 78%, 0.5),
+        1300px 570px 0 hsla(39, 100%, 86%, 0.8),
+        130px 830px 0 hsla(268, 33%, 78%, 0.6),
+        400px 870px 0 hsla(39, 100%, 86%, 0.5),
+        660px 810px 0 hsla(268, 33%, 78%, 0.7),
+        920px 890px 0 hsla(39, 100%, 86%, 0.6),
+        1180px 850px 0 hsla(268, 33%, 78%, 0.5);
+    animation: flotar-2 9s ease-in-out infinite;
+}
+
+/* Capa 3: grandes y rápidas → parecen cercanas */
+.estrellas-3 {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow:
+        310px 140px 1px hsla(39, 100%, 86%, 0.8),
+        640px 70px 1px hsla(268, 33%, 78%, 0.9),
+        870px 200px 1px hsla(39, 100%, 86%, 0.7),
+        180px 380px 1px hsla(268, 33%, 78%, 0.8),
+        550px 420px 1px hsla(39, 100%, 86%, 0.9),
+        820px 360px 1px hsla(268, 33%, 78%, 0.7),
+        1100px 440px 1px hsla(39, 100%, 86%, 0.8),
+        290px 560px 1px hsla(268, 33%, 78%, 0.9),
+        620px 600px 1px hsla(39, 100%, 86%, 0.7),
+        950px 540px 1px hsla(268, 33%, 78%, 0.8),
+        1230px 620px 1px hsla(39, 100%, 86%, 0.9),
+        120px 740px 1px hsla(268, 33%, 78%, 0.7),
+        460px 780px 1px hsla(39, 100%, 86%, 0.8),
+        790px 720px 1px hsla(268, 33%, 78%, 0.9),
+        1060px 800px 1px hsla(39, 100%, 86%, 0.7);
+    animation: flotar-3 9s ease-in-out infinite;
+}
+
+/* Capa 1: flota arriba y abajo suavemente */
+@keyframes flotar-1 {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-15px) translateX(8px);
+    }
+}
+
+/* Capa 2: flota en diagonal opuesta */
+@keyframes flotar-2 {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(12px) translateX(-10px);
+    }
+}
+
+/* Capa 3: movimiento más pequeño, parece más lejana */
+@keyframes flotar-3 {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-8px) translateX(5px);
+    }
+}
+
+
+/* Fondo con degradado usando variables corporativas */
+body {
+    background: linear-gradient(180deg,
+            var(--clr-corporativo-primario) 0%,
+            var(--clr-corporativo-fondo-dark) 100%);
+    height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 1px solid var(--clr-corporativo-lavanda-low);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+/* logo nav */
+.Capa_2 {
+    width: 170px;
+    height: auto;
+    fill: var(--clr-corporativo-blanco);
+}
+
+nav a {
+    color: var(--clr-corporativo-lavanda);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--clr-corporativo-blanco);
+}
+
+nav .btn {
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    padding: 0.7rem 2.7rem;
+    border-radius: 20px;
+    /* 2. EL EFECTO DE GLOW */
+    transition: color 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    /* Para que la animación sea suave */
+
+    /* Sombra principal: Un resplandor sutil inicial */
+    box-shadow: 0 0 5px rgba(122, 111, 157, 0.4);
+}
+
+nav .btn:hover {
+    box-shadow:
+        0 0 20px rgba(122, 111, 157, 0.3);
+    /* Un segundo halo más suave */
+    color: var(--clr-corporativo-blanco);
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    height: 70vh;
+    position: relative;
+}
+
+
+.text {
+    max-width: 600px;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+h1 span {
+    color: var(--clr-corporativo-secundario-rosa-medio);
+}
+
+p {
+    font-size: 1.1rem;
+    color: var(--clr-corporativo-lavanda);
+    margin: 0.5rem 0;
+    max-width: 500px;
+    font-weight: 300;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+    /* Para que esté en una sola línea */
+    white-space: nowrap;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--clr-corporativo-lavanda);
+    font-size: 1.1rem;
+    background: var(--clr-corporativo-lavanda-low);
+    /* 2. EL EFECTO DE GLOW */
+    transition: box-shadow 0.4s ease-in-out;
+    /* Para que la animación sea suave */
+
+    /* Sombra principal: Un resplandor sutil inicial */
+    box-shadow: 0 0 5px rgba(122, 111, 157, 0.4);
+}
+
+.cta:hover {
+    /* background: var(--clr-corporativo-lavanda);
+    color: var(--clr-corporativo-fondo); */
+    box-shadow: 0 0 5px rgba(122, 111, 157, 0.8),
+        /* Resplandor más fuerte y extendido */
+        0 0 30px rgba(122, 111, 157, 0.3);
+    /* Un segundo halo más suave */
+}
+
+
+
+.scroll {
+    position: absolute;
+    left: 4rem;
+    font-size: 1.2rem;
+    color: var(--clr-corporativo-lavanda);
+    opacity: 0.7;
+    border-left: 1px solid var(--clr-corporativo-lavanda);
+    padding-left: 10px;
+    font-family: 'Annie Use Your Telescope', sans-serif;
+    margin-top: 1.5rem;
+}
+
+/* ILUSTRACIÓN HERO BARCO EN AGUA */
+
+.ilustr-hero {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: grid;
+    place-items: center;
+    /* Centra TODO horizontal y verticalmente */
+    grid-template-areas: "stack";
+    /* Crea un área común */
+    margin-top: -21rem;
+    position: relative;
+}
+
+.ilustr-hero>* {
+    max-width: 100vw;
+    max-height: 100vh;
+    grid-area: stack;
+    /* Todos los elementos van a la misma celda, uno encima de otro */
+}
+
+.luna-hero {
+    z-index: 0;
+    margin-bottom: 200px;
+}
+
+.nubes-hero {
+    z-index: 1;
+    margin-bottom: 185px;
+}
+
+.agua-hero {
+    position: absolute;
+    top: 370px;
+    left: 0;
+    z-index: 2;
+}
+
+.barco-hero {
+    z-index: 3;
+    margin-bottom: 150px;
+    margin-left: 9%;
+    justify-self: center;
+    align-self: center;
+}
+
+.acomp-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
