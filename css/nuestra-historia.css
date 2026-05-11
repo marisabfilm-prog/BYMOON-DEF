@@ -1,0 +1,111 @@
+/* ── BANNER ── */
+.historia-banner {
+    padding: 6rem 4rem 5rem;
+    background:
+        linear-gradient(to bottom, hsla(230, 60%, 30%, 0.6) 0%, transparent 100%),
+        linear-gradient(to right, hsla(270, 60%, 25%, 0.4) 0%, hsla(230, 70%, 35%, 0.3) 50%, hsla(270, 60%, 25%, 0.4) 100%);
+    text-align: center;
+}
+
+.historia-banner-titulo {
+    font-size: var(--font-size-h1-principal-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--clr-corporativo-primario-lila);
+    text-shadow:
+        0 0 7px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(157, 78, 221, 0.3);
+}
+
+/* ── CONTENIDO ── */
+.historia-contenido {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 4rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* ── BLOQUE ── */
+.historia-bloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 0;
+    gap: 1rem;
+}
+
+/* ── SUBTÍTULO ── */
+.historia-subtitulo {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 300;
+    letter-spacing: 0.15rem;
+    color: var(--clr-corporativo-primario-lila);
+    margin-bottom: 1rem;
+}
+
+/* ── PÁRRAFOS ── */
+.historia-parrafo {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    line-height: 1.75;
+    letter-spacing: 0.03rem;
+    max-width: 680px;
+    opacity: 0.85;
+    margin-bottom: 0;
+}
+
+.historia-parrafo strong {
+    font-weight: 700;
+    color: var(--clr-corporativo-blanco);
+    opacity: 1;
+}
+
+/* ── DIVISOR ── */
+.historia-divisor {
+    border: none;
+    border-top: 1px solid var(--clr-corporativo-lavanda-low);
+    margin: 0;
+}
+
+/* ── CIERRE ── */
+.historia-bloque-cierre {
+    padding-top: 3rem;
+}
+
+.historia-cierre {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    line-height: 1.8;
+    letter-spacing: 0.03rem;
+    max-width: 680px;
+    opacity: 0.85;
+    margin-bottom: 0;
+}
+
+.historia-cierre strong {
+    font-weight: 700;
+    color: var(--clr-corporativo-blanco);
+    opacity: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .historia-banner {
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .historia-banner-titulo {
+        font-size: var(--font-size-h1-secundario-esc);
+        letter-spacing: 0.3rem;
+    }
+
+    .historia-contenido {
+        padding: 3rem 1.5rem 4rem;
+    }
+}

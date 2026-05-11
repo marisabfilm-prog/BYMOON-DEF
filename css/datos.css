@@ -1,0 +1,94 @@
+/* ── CREAR CUENTA ── */
+.crear-titulo {
+    font-size: var(--font-size-h1-secundario-esc);
+}
+
+.crear-sub {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.6;
+    text-align: center;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+}
+
+/* ── CAMPOS ── */
+.register-field {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.register-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.12rem;
+    color: var(--clr-corporativo-primario-lila);
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+}
+
+/* ── CHECKBOX ── */
+.register-checkbox-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    width: 100%;
+    margin-bottom: 1.8rem;
+    margin-top: 0.4rem;
+}
+
+.register-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 6px;
+    background: hsla(265, 60%, 10%, 0.7);
+    cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    margin-top: 2px;
+    position: relative;
+}
+
+.register-checkbox:checked {
+    background: var(--clr-corporativo-secundario-rosa-claro);
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+    box-shadow: 0 0 10px hsla(315, 39%, 72%, 0.3);
+}
+
+.register-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 9px;
+    border: 2px solid hsl(265, 83%, 5%);
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    top: 2px;
+    left: 6px;
+}
+
+.register-checkbox-label {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.75;
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+
+.register-checkbox-label a {
+    color: var(--clr-corporativo-primario-lila);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+
+.register-checkbox-label a:hover {
+    color: var(--clr-corporativo-secundario-rosa-claro);
+}

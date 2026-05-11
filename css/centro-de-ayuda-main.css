@@ -1,0 +1,187 @@
+/* ── WRAP GENERAL ── */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: calc(100vh - 100px);
+}
+
+.centro-ayuda-wrap {
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: aparecer 0.7s ease both;
+}
+
+/* ── FLECHA VOLVER ── */
+.centro-ayuda-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.centro-ayuda-back:hover {
+    opacity: 1;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+}
+
+/* ── TÍTULO ── */
+.centro-ayuda-titulo {
+    font-size: var(--font-size-h1-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--clr-corporativo-primario-lila);
+    text-shadow:
+        0 0 7px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(157, 78, 221, 0.3);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ── BUSCADOR ── */
+.centro-ayuda-buscador-wrap {
+    width: 100%;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.centro-ayuda-buscador {
+    width: 100%;
+    background: hsla(265, 60%, 10%, 0.7);
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 50px;
+    padding: 1.1rem 3.5rem 1.1rem 1.8rem;
+    font-size: var(--font-size-parrafo-esc);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--clr-corporativo-primario-lila);
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.03rem;
+}
+
+.centro-ayuda-buscador::placeholder {
+    color: hsla(260, 30%, 83%, 0.35);
+}
+
+.centro-ayuda-buscador:focus {
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+    box-shadow: 0 0 0 3px hsla(315, 39%, 72%, 0.12),
+        0 0 20px hsla(268, 33%, 78%, 0.15);
+}
+
+.centro-ayuda-buscador-icono {
+    position: absolute;
+    right: 1.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ── LABEL TEMAS ── */
+.centro-ayuda-label {
+    font-size: 1.2rem;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.75;
+    letter-spacing: 0.08rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ── GRID CARDS ── */
+.centro-ayuda-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+/* ── CARD ── */
+.ayuda-card {
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 16px;
+    background: hsla(265, 60%, 8%, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 2.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s;
+}
+
+.ayuda-card:hover {
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+    box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
+    transform: translateY(-4px);
+}
+
+.ayuda-card-icono {
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.ayuda-card:hover .ayuda-card-icono {
+    opacity: 1;
+}
+
+.ayuda-card-texto {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* ── CTA CONTACTO ── */
+.centro-ayuda-cta-texto {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.6;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    .centro-ayuda-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.25rem;
+    }
+
+    .centro-ayuda-grid {
+        gap: 0.8rem;
+    }
+
+    .ayuda-card {
+        padding: 2rem 1rem 1.5rem;
+    }
+}

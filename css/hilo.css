@@ -1,0 +1,141 @@
+/* ── PÁGINA DE HILO DETALLADO ── */
+
+.main-hilo {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 10rem;
+    position: relative;
+}
+
+.hilo-principal {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 190, 228, 0.1);
+    margin-bottom: 2rem;
+}
+
+.hilo-autor-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mini-avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--clr-corporativo-lavanda-low);
+    border-radius: 50%;
+}
+
+.hilo-titulo {
+    font-size: 1.5rem;
+    color: var(--clr-corporativo-blanco);
+    margin-bottom: 1rem;
+}
+
+.hilo-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--clr-corporativo-primario-lila);
+}
+
+.hilo-metadatos {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    border-bottom: 1px solid rgba(212, 190, 228, 0.1);
+    padding-bottom: 1rem;
+}
+
+.hilo-acciones-principales {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ── RESPUESTAS Y LÍNEA CONECTORA ── */
+
+.respuestas-hilo {
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* La línea vertical que conecta */
+.linea-conexion {
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(212, 190, 228, 0.1);
+    z-index: 1;
+}
+
+.respuesta-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.respuesta-avatar {
+    width: 35px;
+    height: 35px;
+    background: #2a1b3d;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.respuesta-user {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+    margin-bottom: 0.3rem;
+}
+
+.respuesta-txt {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--clr-corporativo-blanco);
+}
+
+.respuesta-acciones {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0.4;
+    font-size: 0.8rem;
+}
+
+/* ── CAJA DE TEXTO INFERIOR ── */
+
+.escribir-respuesta {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 550px;
+    background: var(--clr-corporativo-fondo-darker);
+    padding: 1.5rem;
+    border-top: 1px solid rgba(212, 190, 228, 0.2);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.escribir-respuesta input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 25px;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    outline: none;
+}

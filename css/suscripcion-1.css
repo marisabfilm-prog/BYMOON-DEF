@@ -1,0 +1,196 @@
+/* ── BODY OVERRIDE (fondo claro) ── */
+body {
+    background: hsl(240, 40%, 94%);
+    background-image:
+        repeating-linear-gradient(to right,
+            hsla(260, 30%, 70%, 0.12) 0px,
+            hsla(260, 30%, 70%, 0.12) 1px,
+            transparent 1px,
+            transparent 60px);
+}
+
+/* ── MAIN ── */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 6rem;
+    min-height: calc(100vh - 100px);
+}
+
+/* ── STEPPER ── */
+.stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.stepper-linea {
+    position: absolute;
+    top: 9px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: hsla(260, 20%, 60%, 0.35);
+    z-index: 0;
+}
+
+.stepper-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.stepper-circulo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: hsla(260, 20%, 75%, 0.5);
+    border: 2px solid hsla(260, 20%, 65%, 0.4);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.stepper-paso-activo .stepper-circulo {
+    background: hsl(260, 30%, 55%);
+    border-color: hsl(260, 30%, 45%);
+}
+
+.stepper-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: hsl(260, 20%, 50%);
+}
+
+.stepper-paso-activo .stepper-label {
+    color: hsl(260, 30%, 35%);
+    font-weight: 600;
+}
+
+/* ── WRAP CONTENIDO ── */
+.plan-wrap {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: aparecer 0.6s ease both;
+}
+
+/* ── TÍTULO ── */
+.plan-titulo {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.35rem;
+    color: hsl(260, 40%, 25%);
+    margin-bottom: 2rem;
+}
+
+/* ── PLAN SELECCIONADO ── */
+.plan-seleccionado-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: hsl(260, 20%, 50%);
+    margin-bottom: 0.4rem;
+}
+
+.plan-seleccionado-nombre {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: hsl(260, 40%, 25%);
+    margin-bottom: 0.6rem;
+}
+
+.plan-modalidad-label {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: hsl(260, 20%, 45%);
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ── CARDS MODALIDAD ── */
+.plan-modalidades {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.plan-modalidad {
+    flex: 1;
+    border: 1px solid hsla(260, 20%, 65%, 0.4);
+    border-radius: 16px;
+    background: hsla(0, 0%, 100%, 0.6);
+    backdrop-filter: blur(8px);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.plan-modalidad:hover {
+    border-color: hsl(260, 30%, 55%);
+    box-shadow: 0 4px 24px hsla(260, 30%, 55%, 0.15);
+}
+
+/* ── TIPO ── */
+.plan-modalidad-tipo {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: hsl(260, 30%, 40%);
+    margin-bottom: 0.4rem;
+}
+
+/* ── PRECIOS ── */
+.plan-modalidad-precio {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(260, 40%, 25%);
+    letter-spacing: 0.05rem;
+}
+
+.plan-modalidad-precio-destacado {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: hsl(260, 40%, 25%);
+    letter-spacing: 0.05rem;
+}
+
+.plan-modalidad-nota {
+    font-size: 0.78rem;
+    font-weight: 300;
+    color: hsl(260, 20%, 50%);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .plan-modalidades {
+        flex-direction: column;
+    }
+
+    .plan-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
+    }
+}

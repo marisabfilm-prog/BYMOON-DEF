@@ -1,0 +1,123 @@
+/* ── PERFIL PÚBLICO / AJENO ── */
+
+/* Contenedor de Comentarios (Caja con fondo oscuro suave) */
+.comentarios-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.2);
+    /* Fondo sutil para agrupar */
+    padding: 2rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+.lista-comentarios {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.comentario-item {
+    border-top: 1px solid rgba(212, 190, 228, 0.15);
+    /* Línea divisoria */
+    padding: 1.5rem 0.5rem;
+    animation: aparecer 0.5s ease both;
+}
+
+.comentario-autor {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-corporativo-blanco);
+    margin-bottom: 0.8rem;
+}
+
+.comentario-texto {
+    font-size: 0.85rem;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.9;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.comentario-acciones {
+    display: flex;
+    gap: 1.2rem;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.comentario-acciones span:hover {
+    opacity: 1;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+}
+
+/* Avatar circular real */
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ── SOLUCIÓN ERROR LAYOUT ── */
+
+.main-ajeno {
+    height: auto !important;
+    /* Permite que el contenedor crezca */
+    min-height: 100vh;
+    padding-bottom: 100px;
+    /* Espacio de seguridad para el footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comentarios-seccion {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comentarios-wrapper {
+    width: 100%;
+    background: rgba(15, 10, 25, 0.4);
+    /* Fondo oscuro como en la foto */
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 1rem;
+}
+
+.comentario-card {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(212, 190, 228, 0.1);
+}
+
+.comentario-card:last-child {
+    border-bottom: none;
+    /* El último no lleva línea */
+}
+
+.comentario-user {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--clr-corporativo-blanco);
+    margin-bottom: 0.5rem;
+}
+
+.comentario-body {
+    font-size: 0.85rem;
+    color: var(--clr-corporativo-primario-lila);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.comentario-icons {
+    display: flex;
+    gap: 1.5rem;
+    opacity: 0.4;
+    font-size: 0.9rem;
+}

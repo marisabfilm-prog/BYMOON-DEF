@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bymoon. — Confirma que eres tú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/utility-clases_variables.css" />
+    <link rel="stylesheet" href="css/estrellas.css" />
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/inicio-registro.css" />
+    <link rel="stylesheet" href="css/datos.css" />
+    <link rel="stylesheet" href="css/botones.css" />
+    <link rel="stylesheet" href="css/footer-nav.css" />
+
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "52b7e2cd-14b0-4d8e-b3bb-57542ebbcdaa"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+</head>
+
+<body>
+
+    <header class="flex flex-space-between flex-align-items-c">
+        <a href="index.html" class="logo-nav">
+            <img class="logo" src="svg/logo.svg" alt="bymoon." />
+        </a>
+        <nav class="flex flex-align-items-c flex-wrap">
+            <a href="ayuda-nocturna.html">Ayuda nocturna</a>
+            <a href="entrega-lunar.html">Entrega lunar</a>
+            <a href="desvelados.html">Desvelados</a>
+            <a href="#">Suscripción</a>
+            <a href="#">
+                <img class="icono-perfil" src="svg/perfil.svg" alt="perfil" />
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="estrellas-1"></div>
+        <div class="estrellas-2"></div>
+        <div class="estrellas-3"></div>
+
+        <div class="login-card">
+            <h1 class="login-titulo crear-titulo">Vamos a crear tu cuenta</h1>
+            <p class="crear-sub">Para obtener acceso a nuestro refugio nocturno...</p>
+
+            <div class="register-field">
+                <label class="register-label" for="nombre">Nombre</label>
+                <input class="login-input" id="nombre" type="text" placeholder="Tu nombre" autocomplete="given-name" />
+            </div>
+
+            <div class="register-field">
+                <label class="register-label" for="fecha">Fecha de nacimiento</label>
+                <input class="login-input" id="fecha" type="date" autocomplete="bday" />
+            </div>
+
+            <div class="register-field">
+                <label class="register-label" for="email">Correo electrónico</label>
+                <input class="login-input" id="email" type="email" placeholder="hola@gmail.com" autocomplete="email" />
+            </div>
+
+            <div class="register-field">
+                <label class="register-label" for="password">Contraseña</label>
+                <input class="login-input" id="password" type="password" placeholder="••••••••"
+                    autocomplete="new-password" />
+            </div>
+
+            <div class="register-checkbox-row">
+                <input class="register-checkbox" id="terminos" type="checkbox" />
+                <label class="register-checkbox-label" for="terminos">
+                    Al continuar, aceptas nuestros <a href="#">Términos y Condiciones</a> y la <a href="#">Política de
+                        Privacidad</a>.
+                </label>
+            </div>
+
+            <a href="bienvenido-planes.html">
+                <button class="login-btn-email">Continuar</button>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-card">
+            <div class="footer-mission-social">
+                <p class="footer-mision">Transformar el desvelo<br>en un espacio de calma</p>
+                <img class="icono-social" src="svg/tiktok.svg" alt="tiktok" width="40px" />
+                <img class="icono-social" src="svg/instagram.svg" alt="instagram" width="40px" />
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-titulo">MARCA + LEGAL</p>
+                <a href="#" class="footer-link footer-link-rosa">Nuestra historia</a>
+                <a href="#" class="footer-link">Tu seguridad y privacidad</a>
+            </div>
+
+            <div class="footer-col">
+                <p class="footer-col-titulo">SOPORTE</p>
+                <a href="#" class="footer-link">Contáctanos</a>
+                <a href="#" class="footer-link">Centro de ayuda</a>
+                <p class="footer-copy">©2026. BYMOON.</p>
+            </div>
+        </div>
+
+        <img class="bymoon-footer" src="svg/bymoon-footer.svg" alt="bymoon-footer" />
+    </footer>
+
+</body>
+
+</html>

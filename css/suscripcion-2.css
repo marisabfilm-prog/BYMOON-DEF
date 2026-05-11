@@ -1,0 +1,394 @@
+/* ── BODY OVERRIDE (fondo claro) ── */
+body {
+    background: hsl(240, 40%, 94%);
+    background-image:
+        repeating-linear-gradient(to right,
+            hsla(260, 30%, 70%, 0.12) 0px,
+            hsla(260, 30%, 70%, 0.12) 1px,
+            transparent 1px,
+            transparent 60px);
+}
+
+/* ── MAIN ── */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 6rem;
+    min-height: calc(100vh - 100px);
+}
+
+/* ── STEPPER ── */
+.stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.stepper-linea {
+    position: absolute;
+    top: 9px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: hsla(260, 20%, 60%, 0.35);
+    z-index: 0;
+}
+
+.stepper-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.stepper-circulo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: hsla(260, 20%, 75%, 0.5);
+    border: 2px solid hsla(260, 20%, 65%, 0.4);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.stepper-paso-completo .stepper-circulo {
+    background: hsl(260, 30%, 55%);
+    border-color: hsl(260, 30%, 45%);
+}
+
+.stepper-paso-activo .stepper-circulo {
+    background: hsl(260, 30%, 55%);
+    border-color: hsl(260, 30%, 45%);
+    box-shadow: 0 0 0 4px hsla(260, 30%, 55%, 0.2);
+}
+
+.stepper-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: hsl(260, 20%, 50%);
+}
+
+.stepper-paso-activo .stepper-label {
+    color: hsl(260, 30%, 35%);
+    font-weight: 600;
+}
+
+.stepper-paso-completo .stepper-label {
+    color: hsl(260, 30%, 45%);
+}
+
+/* ── WRAP CONTENIDO ── */
+.pago-wrap {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecer 0.6s ease both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── TÍTULO ── */
+.pago-titulo {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.35rem;
+    color: hsl(260, 40%, 25%);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ── SECCIÓN ── */
+.pago-seccion {
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.pago-seccion-titulo {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: hsl(260, 20%, 50%);
+    margin-bottom: 1rem;
+}
+
+/* ── CAMPOS ── */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.campo-fila {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.campo-fila .campo {
+    flex: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.campo label {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: hsl(260, 20%, 50%);
+    letter-spacing: 0.06rem;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    background: hsla(0, 0%, 100%, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsla(260, 20%, 65%, 0.4);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: var(--font-size-parrafo);
+    font-weight: 400;
+    color: hsl(260, 40%, 25%);
+    outline: none;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.campo textarea {
+    resize: none;
+    height: 80px;
+    line-height: 1.5;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: hsla(260, 20%, 60%, 0.5);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: hsl(260, 30%, 55%);
+    box-shadow: 0 0 0 3px hsla(260, 30%, 55%, 0.12);
+}
+
+/* ── FORMAS DE PAGO ── */
+.pago-metodos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.pago-metodo-wrap {
+    position: relative;
+}
+
+.pago-metodo-wrap input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.pago-metodo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: hsla(0, 0%, 100%, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid hsla(260, 20%, 65%, 0.4);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.pago-metodo:hover {
+    border-color: hsl(260, 30%, 55%);
+    box-shadow: 0 4px 16px hsla(260, 30%, 55%, 0.1);
+}
+
+.pago-metodo-wrap.activo .pago-metodo {
+    border-color: hsl(260, 30%, 55%);
+    box-shadow: 0 4px 20px hsla(260, 30%, 55%, 0.15);
+}
+
+/* Radio custom */
+.pago-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid hsla(260, 20%, 65%, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+
+.pago-radio-inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: hsl(260, 30%, 55%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.pago-metodo-wrap.activo .pago-radio {
+    border-color: hsl(260, 30%, 55%);
+}
+
+.pago-metodo-wrap.activo .pago-radio-inner {
+    opacity: 1;
+}
+
+.pago-metodo-nombre {
+    flex: 1;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: hsl(260, 40%, 25%);
+    letter-spacing: 0.03rem;
+}
+
+.pago-metodo-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo-pago {
+    height: 20px;
+    width: auto;
+}
+
+/* ── CAMPOS TARJETA ── */
+.campos-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.2rem;
+    background: hsla(260, 20%, 96%, 0.5);
+    border: 1px solid hsla(260, 20%, 65%, 0.25);
+    border-radius: 14px;
+    animation: aparecer 0.3s ease both;
+}
+
+/* ── TÉRMINOS ── */
+.terminos {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.terminos-check {
+    width: 18px;
+    height: 18px;
+    border: 1px solid hsla(260, 20%, 65%, 0.4);
+    border-radius: 4px;
+    background: hsla(0, 0%, 100%, 0.6);
+    flex-shrink: 0;
+    margin-top: 1px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: background 0.2s, border-color 0.2s;
+    position: relative;
+}
+
+.terminos-check:checked {
+    background: hsl(260, 30%, 55%);
+    border-color: hsl(260, 30%, 55%);
+}
+
+.terminos-check:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.terminos-texto {
+    font-size: 0.76rem;
+    font-weight: 300;
+    color: hsl(260, 20%, 50%);
+    line-height: 1.5;
+}
+
+.terminos-texto a {
+    color: hsl(260, 30%, 55%);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── PRECIO ── */
+.precio-resumen {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(260, 40%, 25%);
+    letter-spacing: 0.05rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+/* ── NOTAS SEGURIDAD ── */
+.notas-seguridad {
+    margin-top: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.notas-seguridad p {
+    font-size: 0.74rem;
+    font-weight: 300;
+    color: hsl(260, 20%, 50%);
+    letter-spacing: 0.03rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .campo-fila {
+        flex-direction: column;
+    }
+
+    .pago-titulo {
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+    }
+}

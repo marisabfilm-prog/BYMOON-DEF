@@ -1,0 +1,11 @@
+/* ── INTRO SIN FUENTE ESPECIAL ── */
+.ayuda-articulo-intro-sans {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    letter-spacing: 0.06rem;
+    opacity: 0.8;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+    text-align: center;
+}

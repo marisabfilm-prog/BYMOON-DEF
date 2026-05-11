@@ -1,0 +1,236 @@
+/* ── BIENVENIDA PLANES ── */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    min-height: auto;
+}
+
+.bienvenida-wrap {
+    width: 100%;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: aparecer 0.7s ease both;
+}
+
+/* ── ENCABEZADO ── */
+.bienvenida-titulo {
+    font-size: var(--font-size-h1-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.35rem;
+    text-align: center;
+    color: var(--clr-corporativo-primario-lila);
+    text-shadow:
+        0 0 7px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(157, 78, 221, 0.25);
+    margin-bottom: 0.8rem;
+}
+
+.bienvenida-sub {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1.2rem;
+    max-width: 100%;
+}
+
+.bienvenida-cta-texto {
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 1.6rem;
+    color: var(--clr-corporativo-primario-lila);
+    text-align: center;
+    letter-spacing: 0.08rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+/* ── ROW PLANES ── */
+.planes-row {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+    margin-bottom: 2rem;
+}
+
+/* ── CARD BASE ── */
+.plan-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    background: hsla(265, 60%, 8%, 0.6);
+    backdrop-filter: blur(8px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+    box-shadow: 0 0 24px var(--clr-corporativo-lavanda-low);
+}
+
+/* ── CARD DESTACADA ── */
+.plan-card-destacado {
+    border-color: hsla(268, 33%, 78%, 0.5);
+    background: hsla(265, 60%, 10%, 0.7);
+}
+
+/* ── CABECERA CARD ── */
+.plan-label {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.6;
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.plan-nombre {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--clr-corporativo-primario-lila);
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px hsla(268, 33%, 78%, 0.2);
+}
+
+/* ── FEATURES ── */
+.plan-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.plan-features li {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    line-height: 1.5;
+    letter-spacing: 0.03rem;
+}
+
+.plan-features li strong {
+    font-weight: 700;
+    color: var(--clr-corporativo-blanco);
+}
+
+/* ── CAJA PRECIOS ── */
+.plan-precios {
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 14px;
+    padding: 1.5rem 1.2rem;
+    background: hsla(265, 60%, 6%, 0.5);
+    text-align: center;
+    margin-bottom: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.plan-precio-tipo {
+    font-size: var(--font-size-parrafo);
+    font-weight: 300;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+    letter-spacing: 0.05rem;
+    margin-bottom: 0;
+}
+
+.plan-precio-anual {
+    margin-top: 0.8rem;
+}
+
+.plan-precio-valor {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--clr-corporativo-primario-lila);
+    letter-spacing: 0.05rem;
+    margin-bottom: 0;
+}
+
+.plan-precio-nota {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.55;
+    line-height: 1.4;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+/* ── NOTAS LEGALES ── */
+.planes-notas {
+    width: 100%;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.planes-notas p {
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.6;
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+    max-width: 100%;
+}
+
+.planes-notas p strong {
+    font-weight: 600;
+    opacity: 1;
+    color: var(--clr-corporativo-primario-lila);
+}
+
+/* ── LINK PLAN GRATUITO ── */
+.planes-seguir-link {
+    font-size: var(--font-size-parrafo);
+    font-weight: 400;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: var(--clr-corporativo-primario-lila);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    opacity: 0.55;
+    transition: opacity 0.2s, color 0.2s;
+    margin-bottom: 1rem;
+}
+
+.planes-seguir-link:hover {
+    opacity: 1;
+    color: var(--clr-corporativo-blanco);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    .planes-row {
+        flex-direction: column;
+    }
+
+    .bienvenida-titulo {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bymoon. — Inicia sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/utility-clases_variables.css" />
+    <link rel="stylesheet" href="css/estrellas.css" />
+
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/mi-actividad-nocturna.css" />
+    <link rel="stylesheet" href="css/perfil.css" />
+
+<link rel="stylesheet" href="css/botones.css" />
+<link rel="stylesheet" href="css/footer-nav.css" />
+
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "52b7e2cd-14b0-4d8e-b3bb-57542ebbcdaa"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+</head>
+
+<body>
+
+    <div class="estrellas-1"></div>
+    <div class="estrellas-2"></div>
+    <div class="estrellas-3"></div>
+
+    <header class="flex flex-space-between flex-align-items-c">
+        <a href="index.html" class="logo-nav">
+            <img class="logo" src="svg/logo.svg" alt="bymoon." />
+        </a>
+        <nav class="flex flex-align-items-c flex-wrap">
+            <a href="ayuda-nocturna.html">Ayuda nocturna</a>
+            <a href="entrega-lunar.html">Entrega lunar</a>
+            <a href="desvelados.html">Desvelados</a>
+            <a href="#">Suscripción</a>
+            <a href="inicio-registro.html">
+                <img class="icono-perfil" src="svg/perfil.svg" alt="perfil" />
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- NOMBRE -->
+        <p class="perfil-nombre">@porsinovuelves</p>
+        
+        <!-- STATS -->
+        <div class="perfil-stats">
+            <div class="stat">
+                <span class="stat-num">1.456</span>
+                <span class="stat-label">Seguidores</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num">1.456</span>
+                <span class="stat-label">Siguiendo</span>
+            </div>
+        </div>
+        
+        <!-- EDITAR -->
+        <button class="btn-editar">Editar perfil</button>
+        
+        <!-- BIO -->
+        <p class="perfil-bio">
+            Tengo un corazón que por el día duerme,<br>
+            por las noches sueña, y cuando precisa, late.
+        </p>
+        <p class="perfil-fecha">Se unió el 27 de diciembre de 2025</p>
+        
+<p class="seccion-titulo">Mi actividad nocturna</p>
+
+<div class="card-dark card-actividad-detallada">
+    <div class="sentimiento-container">
+        <p class="pregunta-sentimiento">¿CÓMO TE SIENTES HOY?</p>
+        <div class="sentimiento-iconos">
+            <button class="btn-emoji" title="Triste"><span>😭</span></button>
+            <button class="btn-emoji" title="Cansado"><span>😫</span></button>
+            <button class="btn-emoji" title="Neutro"><span>👀</span></button>
+            <button class="btn-emoji" title="Bien"><span>😊</span></button>
+        </div>
+    </div>
+
+    <div class="grafico-row">
+        <div class="grafico-visual">
+            <div class="anillo-actividad" style="--porcentaje: 75;">
+                <span class="dato-izq">25%</span>
+                <span class="dato-der">75%</span>
+            </div>
+        </div>
+        <div class="grafico-leyenda">
+            <div class="leyenda-item">
+                <span class="cuadrito lila-claro"></span>
+                <span class="leyenda-txt">GUARDADOS</span>
+            </div>
+            <div class="leyenda-item">
+                <span class="cuadrito lila-oscuro"></span>
+                <span class="leyenda-txt">COMENTADO</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tabs-perfil">
+    <button class="tab-btn active" id="btn-hilos" onclick="cambiarTab('hilos')">
+        Mis hilos <br>y comentarios
+    </button>
+    <button class="tab-btn" id="btn-guardados" onclick="cambiarTab('guardados')">
+        Mis guardados
+    </button>
+</div>
+
+<p class="info-auxiliar" id="info-tab">Aquí encontrarás los hilos y comentarios creados por ti</p>
+
+<div id="grid-contenido" class="grid-hilos">
+    <div class="hilo-card hilo-propio" style="background-image: url('jpg/hilo1.jpg');">
+        <div class="hilo-overlay">
+            <p>HILO 1</p><span>🌕</span>
+        </div>
+    </div>
+    <div class="hilo-card hilo-ajeno">
+        <p class="hilo-autor">HILO de @fulanito</p>
+        <p class="hilo-cita">Dormir es el arte de soltar todo lo que no puedes controlar hasta mañana.</p>
+    </div>
+</div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-card">
+        <div class="footer-mission-social">
+            <p class="footer-mision">Transformar el desvelo<br>en un espacio de calma</p>
+            <img class="icono-social" src="svg/tiktok.svg" alt="tiktok" width="40px" />
+            <img class="icono-social" src="svg/instagram.svg" alt="instagram" width="40px" />
+        </div>
+
+        <div class="footer-col">
+            <p class="footer-col-titulo">MARCA + LEGAL</p>
+            <a href="#" class="footer-link footer-link-rosa">Nuestra historia</a>
+            <a href="#" class="footer-link">Tu seguridad y privacidad</a>
+        </div>
+
+        <div class="footer-col">
+            <p class="footer-col-titulo">SOPORTE</p>
+            <a href="#" class="footer-link">Contáctanos</a>
+            <a href="#" class="footer-link">Centro de ayuda</a>
+            <p class="footer-copy">©2026. BYMOON.</p>
+        </div>
+    </div>
+
+    <img class="bymoon-footer" src="svg/bymoon-footer.svg" alt="bymoon-footer" />
+</footer>
+
+<script src="js/mi-actividad-nocturna.js"></script>
+
+</body>
+
+</html>

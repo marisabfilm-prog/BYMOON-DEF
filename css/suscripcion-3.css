@@ -1,0 +1,202 @@
+/* ── BODY OVERRIDE (fondo claro) ── */
+body {
+    background: hsl(240, 40%, 94%);
+    background-image:
+        repeating-linear-gradient(to right,
+            hsla(260, 30%, 70%, 0.12) 0px,
+            hsla(260, 30%, 70%, 0.12) 1px,
+            transparent 1px,
+            transparent 60px);
+}
+
+/* ── MAIN ── */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem 6rem;
+    min-height: calc(100vh - 100px);
+}
+
+/* ── STEPPER ── */
+.stepper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 3rem;
+}
+
+.stepper-linea {
+    position: absolute;
+    top: 9px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: hsl(260, 30%, 55%);
+    z-index: 0;
+}
+
+.stepper-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.stepper-circulo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: hsla(260, 20%, 75%, 0.5);
+    border: 2px solid hsla(260, 20%, 65%, 0.4);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.stepper-paso-activo .stepper-circulo,
+.stepper-paso-completado .stepper-circulo {
+    background: hsl(260, 30%, 55%);
+    border-color: hsl(260, 30%, 45%);
+}
+
+.stepper-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: hsl(260, 20%, 50%);
+}
+
+.stepper-paso-activo .stepper-label {
+    color: hsl(260, 30%, 35%);
+    font-weight: 600;
+}
+
+/* ── WRAP CONTENIDO ── */
+.conf-wrap {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: aparecer 0.6s ease both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── TÍTULO ── */
+.conf-titulo {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: hsl(260, 40%, 25%);
+    margin-bottom: 0.9rem;
+    line-height: 1.2;
+}
+
+/* ── SUBTÍTULO ── */
+.conf-subtitulo {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: hsl(260, 20%, 45%);
+    letter-spacing: 0.03rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ── DETALLES DEL PLAN ── */
+.conf-detalles-titulo {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: hsl(260, 30%, 50%);
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.conf-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    padding: 0;
+}
+
+.conf-lista li {
+    font-size: var(--font-size-parrafo);
+    font-weight: 400;
+    color: hsl(260, 20%, 45%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.conf-lista li::before {
+    content: "•";
+    color: hsl(260, 30%, 55%);
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.det-label {
+    font-weight: 700;
+    color: hsl(260, 40%, 30%);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── NOTA ── */
+.conf-nota {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: hsl(260, 20%, 50%);
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+}
+
+.conf-nota strong {
+    font-weight: 700;
+    color: hsl(260, 30%, 40%);
+}
+
+.conf-nota a {
+    color: hsl(260, 30%, 45%);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+}
+
+.conf-nota a:hover {
+    color: hsl(260, 30%, 30%);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .conf-titulo {
+        font-size: 1.3rem;
+        letter-spacing: 0.18rem;
+    }
+}

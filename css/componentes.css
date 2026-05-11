@@ -1,0 +1,280 @@
+/* TARJETAS DE ACOMPAÑAMIENTO */
+.acomp-card {
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 5rem 3rem 2rem 3rem;
+    --clr-corporativo-lavanda-low: hsla(268, 33%, 78%, 0.06);
+    background: var(--clr-corporativo-lavanda-low);
+}
+
+.inside-acomp-card {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    flex: 1;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 16px;
+    background: var(--clr-corporativo-fondo-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    min-height: 280px;
+}
+
+.inside-acomp-card:hover {
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+    box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
+}
+
+.inside-acomp-card-contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+.acomp-num {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--clr-corporativo-secundario-rosa-medio);
+    margin-bottom: 0.6rem;
+}
+
+
+/* SECCIÓN ACOMPAÑAMIENTO */
+.acomp-section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    padding: 0 4rem;
+}
+
+.acomp-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.acomp-row {
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+h2 span {
+    color: var(--clr-corporativo-secundario-rosa-medio);
+}
+
+p.acomp-subtitle {
+    font-weight: 500;
+    margin-bottom: 2.2rem;
+    font-size: 1.3rem;
+}
+
+h3 {
+    color: var(--clr-corporativo-secundario-rosa-claro);
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+    margin-top: 0.01rem;
+}
+
+p.p-acomp {
+    font-weight: 70;
+    font-size: 1rem;
+}
+
+.estrella-icono {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.luna-estrella {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.luna-icono {
+    width: 2.5rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+/* GUÍA NOCTURNA */
+.guia-nocturna-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.guia-nocturna-home h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.guia-nocturna-home .guia-centro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guia-texto {
+    position: absolute;
+    max-width: 17rem;
+    text-align: right;
+    top: 267vh;
+    /* se ha quitado lo siguiente: */
+    /* margin-right: 33rem; */
+    left: 15vw;
+    /* Cuando un elemento lo sacamos del flujo con position absolute usamos top, left, right, bottom para moverlo  */
+}
+
+.guia-texto span {
+    color: var(--clr-corporativo-secundario-rosa-claro);
+    font-weight: 600;
+}
+
+.viento-oeste {
+    width: 40rem;
+    max-width: 100%;
+    height: auto;
+    margin-right: -2rem;
+}
+
+
+/* SECCIÓN ÚNETE */
+.unete {
+    background: var(--clr-corporativo-fondo-darker);
+    margin: 2rem 0 4rem 0;
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.unete h1 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 1rem;
+}
+
+.unete-desc {
+    max-width: 38vw;
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.unete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex: 1;
+    min-width: 280px;
+}
+
+.unete-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-corporativo-primario-lila);
+}
+
+.unete-input {
+    background: var(--clr-corporativo-fondo-dark);
+    border: 1.5px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 10px;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--clr-corporativo-primario-lila);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.unete-input::placeholder {
+    color: var(--clr-corporativo-lavanda-low);
+}
+
+.unete-input:focus {
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
+}
+
+
+@media (max-width: 768px) {
+
+    /* CARDS ACOMPAÑAMIENTO - apiladas en columna */
+    .acomp-row {
+        flex-direction: column;
+    }
+
+    .inside-acomp-card {
+        min-height: unset;
+    }
+
+    .acomp-section {
+        padding: 0 1.5rem;
+    }
+
+    .acomp-card {
+        margin: 2rem 1rem;
+        padding: 1rem;
+    }
+
+    /* GUÍA NOCTURNA */
+    .guia-nocturna-home {
+        padding: 2rem 1.5rem;
+    }
+
+    .guia-texto {
+        position: static;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .guia-nocturna-home .guia-centro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .viento-oeste {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* ÚNETE */
+    .unete {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        margin: 1rem 0;
+        gap: 2rem;
+    }
+
+    .unete h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .unete-desc {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .unete-form {
+        width: 100%;
+    }
+
+}

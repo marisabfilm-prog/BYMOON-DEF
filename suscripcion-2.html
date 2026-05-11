@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bymoon. — Inicia sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/utility-clases.css" />
+    <link rel="stylesheet" href="css/estrellas.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/suscripcion-1.css" />
+</head>
+
+<body>
+    <header class="flex flex-space-between flex-align-items-c"> <a href="index.html" class="logo-nav"> <img class="logo"
+                src="svg/logo.svg" alt="bymoon." /> </a>
+        <nav class="flex flex-align-items-c flex-wrap"> <a href="ayuda-nocturna.html">Ayuda nocturna</a> <a
+                href="entrega-lunar.html">Entrega lunar</a> <a href="desvelados.html">Desvelados</a> <a
+                href="#">Suscripción</a> <a href="inicio-registro.html"> <img class="icono-perfil" src="svg/perfil.svg"
+                    alt="perfil" /> </a> </nav>
+    </header>
+  doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bymoon. — Pago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet" />
+    
+    
+    <link rel="stylesheet" href="css/utility-clases_variables.css" />
+    <link rel="stylesheet" href="css/estrellas.css" />
+
+    <link rel="stylesheet" href="css/componentes.css" />
+    <link rel="stylesheet" href="css/suscripcion-2.css" />
+<link rel="stylesheet" href="css/botones.css" />
+    <script
+        type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "52b7e2cd-14b0-4d8e-b3bb-57542ebbcdaa"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
+</head>
+
+<body>
+
+    <header class="flex flex-space-between flex-align-items-c">
+        <a href="index.html" class="logo-nav">
+            <img class="logo" src="svg/logo.svg" alt="bymoon." />
+        </a>
+    </header>
+
+    <main>
+
+        <!-- STEPPER -->
+        <div class="stepper">
+            <div class="stepper-linea"></div>
+            <div class="stepper-paso stepper-paso-completo">
+                <div class="stepper-circulo"></div>
+                <span class="stepper-label">Elegir plan</span>
+            </div>
+            <div class="stepper-paso stepper-paso-activo">
+                <div class="stepper-circulo"></div>
+                <span class="stepper-label">Pago</span>
+            </div>
+            <div class="stepper-paso">
+                <div class="stepper-circulo"></div>
+                <span class="stepper-label">Confirmación</span>
+            </div>
+        </div>
+
+        <!-- CONTENIDO -->
+        <div class="pago-wrap">
+
+            <h1 class="pago-titulo">Pago</h1>
+
+            <!-- DATOS DE ENVÍO -->
+            <div class="pago-seccion">
+                <p class="pago-seccion-titulo">Datos de envío</p>
+                <div class="campo-grupo">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+                            autocomplete="given-name" />
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos"
+                            autocomplete="family-name" />
+                    </div>
+
+                    <div class="campo">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle, número, piso…"
+                            autocomplete="street-address" />
+                    </div>
+
+                    <div class="campo-fila">
+                        <div class="campo">
+                            <label for="cp">Código Postal</label>
+                            <input type="text" id="cp" name="cp" placeholder="28001" inputmode="numeric"
+                                maxlength="5" />
+                        </div>
+                        <div class="campo">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad" placeholder="Madrid" />
+                        </div>
+                    </div>
+
+                    <div class="campo-fila">
+                        <div class="campo">
+                            <label for="provincia">Provincia</label>
+                            <input type="text" id="provincia" name="provincia" placeholder="Madrid" />
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" />
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="info-adicional">Información adicional</label>
+                        <textarea id="info-adicional" name="info-adicional"
+                            placeholder="Notas sobre tu pedido…"></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FORMAS DE PAGO -->
+            <div class="pago-seccion">
+                <p class="pago-seccion-titulo">Formas de pago</p>
+
+                <div class="pago-metodos">
+
+                    <div class="pago-metodo-wrap activo" id="wrap-tarjeta">
+                        <input type="radio" name="metodo-pago" id="radio-tarjeta" value="tarjeta" checked />
+                        <label class="pago-metodo" for="radio-tarjeta">
+                            <div class="pago-radio">
+                                <div class="pago-radio-inner"></div>
+                            </div>
+                            <span class="pago-metodo-nombre">Pago con tarjeta</span>
+                            <div class="pago-metodo-logo">
+                                <img src="svg/visa.svg" alt="Visa" class="logo-pago" />
+                                <img src="svg/mastercard.svg" alt="Mastercard" class="logo-pago" />
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Campos tarjeta -->
+                    <div class="campos-tarjeta" id="campos-tarjeta">
+                        <div class="campo">
+                            <label for="num-tarjeta">Número de tarjeta</label>
+                            <input type="text" id="num-tarjeta" placeholder="0000 0000 0000 0000" inputmode="numeric"
+                                maxlength="19" />
+                        </div>
+                        <div class="campo-fila">
+                            <div class="campo">
+                                <label for="caducidad">Caducidad</label>
+                                <input type="text" id="caducidad" placeholder="MM / AA" inputmode="numeric"
+                                    maxlength="7" />
+                            </div>
+                            <div class="campo">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" placeholder="•••" inputmode="numeric" maxlength="4" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pago-metodo-wrap" id="wrap-bizum">
+                        <input type="radio" name="metodo-pago" id="radio-bizum" value="bizum" />
+                        <label class="pago-metodo" for="radio-bizum">
+                            <div class="pago-radio">
+                                <div class="pago-radio-inner"></div>
+                            </div>
+                            <span class="pago-metodo-nombre">Bizum</span>
+                            <div class="pago-metodo-logo">
+                                <img src="svg/bizum.svg" alt="Bizum" class="logo-pago" />
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="pago-metodo-wrap" id="wrap-paypal">
+                        <input type="radio" name="metodo-pago" id="radio-paypal" value="paypal" />
+                        <label class="pago-metodo" for="radio-paypal">
+                            <div class="pago-radio">
+                                <div class="pago-radio-inner"></div>
+                            </div>
+                            <span class="pago-metodo-nombre">Paypal</span>
+                            <div class="pago-metodo-logo">
+                                <img src="svg/paypal.svg" alt="PayPal" class="logo-pago" />
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TÉRMINOS -->
+            <div class="terminos">
+                <input type="checkbox" class="terminos-check" id="terminos" />
+                <label class="terminos-texto" for="terminos">
+                    Al hacer clic en el botón, aceptas nuestros
+                    <a href="#">Términos de Servicio</a> y nuestra <a href="#">Política de Privacidad</a>.
+                </label>
+            </div>
+
+            <!-- PRECIO + CTA -->
+            <p class="precio-resumen">19,99 € / mes</p>
+            <button class="btn-pagar" type="button">Pagar y continuar</button>
+
+            <!-- NOTAS SEGURIDAD -->
+            <div class="notas-seguridad">
+                <p>Pago seguro encriptado.</p>
+                <p>No guardamos los datos de tu tarjeta.</p>
+                <p>Se te cobrarán 19€ cada mes. Cancela cuando quieras.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+        <footer class="footer">
+            <div class="footer-card">
+                <div class="footer-mission-social">
+                    <p class="footer-mision">Transformar el desvelo<br>en un espacio de calma</p> <img
+                        class="icono-social" src="svg/tiktok.svg" alt="tiktok" width="40px" /> <img class="icono-social"
+                        src="svg/instagram.svg" alt="instagram" width="40px" />
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-titulo">MARCA + LEGAL</p> <a href="#"
+                        class="footer-link footer-link-rosa">Nuestra historia</a> <a href="#" class="footer-link">Tu
+                        seguridad y privacidad</a>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-col-titulo">SOPORTE</p> <a href="#" class="footer-link">Contáctanos</a> <a href="#"
+                        class="footer-link">Centro de ayuda</a>
+                    <p class="footer-copy">©2026. BYMOON.</p>
+                </div>
+            </div> <img class="bymoon-footer" src="svg/bymoon-footer.svg" alt="bymoon-footer" />
+        </footer>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+/* ── MAIN ── */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+/* ── FLECHA VOLVER ── */
+.contacto-back {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.contacto-back:hover {
+    opacity: 1;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+}
+
+/* ── CARD ── */
+.contacto-card {
+    background: hsla(265, 60%, 8%, 0.7);
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    border-radius: 24px;
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    backdrop-filter: blur(12px);
+    animation: aparecer 0.7s ease both;
+}
+
+/* ── TÍTULO ── */
+.contacto-titulo {
+    font-size: var(--font-size-h1-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--clr-corporativo-primario-lila);
+    text-shadow:
+        0 0 7px rgba(255, 255, 255, 0.4),
+        0 0 30px rgba(157, 78, 221, 0.25);
+    margin-bottom: 1.5rem;
+}
+
+/* ── TEXTO ── */
+.contacto-texto {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    letter-spacing: 0.03rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-email {
+    font-weight: 700;
+    color: var(--clr-corporativo-primario-lila);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contacto-email:hover {
+    color: var(--clr-corporativo-secundario-rosa-claro);
+}
+
+/* ── DESC ── */
+.contacto-desc {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.65;
+    line-height: 1.7;
+    letter-spacing: 0.03rem;
+    margin-bottom: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .contacto-back {
+        top: 2rem;
+        left: 1.5rem;
+    }
+
+    .contacto-card {
+        padding: 2.5rem 2rem;
+    }
+
+    .contacto-titulo {
+        font-size: 1.4rem;
+        letter-spacing: 0.25rem;
+    }
+}
