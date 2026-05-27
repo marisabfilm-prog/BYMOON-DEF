@@ -1,22 +1,37 @@
-const wraps = document.querySelectorAll('.pago-metodo-wrap');
+const radios = document.querySelectorAll('.metodo input[type=radio]');
 const camposTarjeta = document.getElementById('campos-tarjeta');
 
-wraps.forEach(wrap => {
-    const radio = wrap.querySelector('input[type="radio"]');
-    radio.addEventListener('change', () => {
-        wraps.forEach(w => w.classList.remove('activo'));
-        wrap.classList.add('activo');
-        camposTarjeta.style.display = radio.value === 'tarjeta' ? 'flex' : 'none';
+if (!radios.length) {
+    console.warn('Inputs de método de pago no encontrados');
+} else if (!camposTarjeta) {
+    console.warn('Campo de tarjeta no encontrado');
+} else {
+    radios.forEach(radio => {
+        radio.addEventListener('change', () => {
+            document.querySelectorAll('.metodo').forEach(m => m.classList.remove('activo'));
+            radio.closest('.metodo').classList.add('activo');
+            camposTarjeta.style.display = radio.value === 'tarjeta' ? 'flex' : 'none';
+        });
     });
-});
+}
 
-document.getElementById('num-tarjeta').addEventListener('input', e => {
-    let v = e.target.value.replace(/\D/g, '').substring(0, 16);
-    e.target.value = v.replace(/(.{4})/g, '$1 ').trim();
-});
 
-document.getElementById('caducidad').addEventListener('input', e => {
-    let v = e.target.value.replace(/\D/g, '').substring(0, 4);
-    if (v.length >= 2) v = v.substring(0, 2) + ' / ' + v.substring(2);
-    e.target.value = v;
-});
+//Qué hace: Mostrar/ocultar campo de tarjeta según el método elegido
+
+//Elementos HTML necesarios:
+//- .metodo input[type = radio](botones radio de métodos)
+ //   - #campos - tarjeta(formulario de tarjeta que se muestra / oculta)
+
+//Funcionalidad:
+
+//1. Cuando seleccionas un radio button:
+//- Quita 'activo' de todos los métodos
+ //   - Agrega 'activo' al que seleccionaste(CSS lo resalta)
+
+//2. Lógica:
+//- Si value = 'tarjeta':
+  //   * Muestra el campo de tarjeta(display: flex)
+  //  - Si value ≠ 'tarjeta':
+  //   * Oculta el campo de tarjeta(display: none)
+
+//Resultado: Campo de tarjeta aparece / desaparece según el método

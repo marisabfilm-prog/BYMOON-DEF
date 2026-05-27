@@ -1,11 +1,18 @@
-/* CAPAS DE ESTRELLAS CON PARALAX */
-
+.estrellas-1,
+.estrellas-2,
+.estrellas-3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 /* Capa 1: pequeñas y lentas → parecen lejanas */
 .estrellas-1 {
     position: fixed;
     width: 1px;
     height: 1px;
     background: transparent;
+        z-index: 0;
     box-shadow:
         120vw 80vw 0 hsla(268, 33%, 78%, 0.6),
         340px 45px 0 hsla(39, 100%, 86%, 0.4),
@@ -59,6 +66,7 @@
     width: 2px;
     height: 2px;
     background: transparent;
+        z-index: 0;
     box-shadow:
         220px 110px 0 hsla(39, 100%, 86%, 0.7),
         490px 55px 0 hsla(268, 33%, 78%, 0.8),
@@ -93,6 +101,7 @@
     width: 3px;
     height: 3px;
     background: transparent;
+        z-index: 0;
     box-shadow:
         310px 140px 1px hsla(39, 100%, 86%, 0.8),
         640px 70px 1px hsla(268, 33%, 78%, 0.9),

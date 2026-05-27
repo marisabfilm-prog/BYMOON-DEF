@@ -1,11 +1,23 @@
-/* ── EXTENSIÓN ACTIVIDAD DETALLADA ── */
+/* ── ACTIVIDAD DETALLADA ── */
+
+.seccion-titulo {
+    margin-bottom: -2rem !important;
+}
+
+.card-dark {
+    max-width: 40%;
+}
 
 .card-actividad-detallada {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    padding: 2.5rem !important;
+    margin-top: -1.5rem;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
 }
+
 
 /* Sentimientos */
 .sentimiento-container {
@@ -13,14 +25,16 @@
     border-radius: 15px;
     padding: 1.5rem;
     text-align: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .pregunta-sentimiento {
-    font-size: 0.7rem;
-    letter-spacing: 0.15rem;
+    font-size: var(--font-size-label);
+    letter-spacing: .15rem;
     color: var(--clr-corporativo-primario-lila);
     margin-bottom: 1rem;
-    opacity: 0.8;
+    opacity: .8;
 }
 
 .sentimiento-iconos {
@@ -34,20 +48,44 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 1rem;
+    gap: 8rem;
+    margin: 4rem 5rem;
 }
 
 .grafico-visual {
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 15rem;
+    height: 15rem;
+}
+
+.grafico-interpretacion {
+    border-left: 2px solid var(--clr-corporativo-secundario-rosa-claro);
+    padding-left: 1.2rem;
+    max-width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.grafico-interpretacion-texto {
+    font-size: var(--font-size-comentarios);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario-lila);
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.grafico-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--clr-corporativo-secundario-rosa-claro);
+    opacity: 1;
 }
 
 .anillo-actividad {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    /* Simulamos el gráfico con un conic-gradient */
+    /* Simulamos el gráfico con un conic-gradient: Es un gradiente que gira en círculo alrededor de un punto central, como las agujas de un reloj. El navegador divide el círculo en sectores según los porcentajes, igual que un gráfico de tarta. El: :after que tienes encima recorta el centro para que parezca un anillo en vez de una tarta rellena. */
     background: conic-gradient(var(--clr-corporativo-lavanda-low) 0% 25%,
             var(--clr-corporativo-secundario-rosa-claro) 25% 100%);
     display: flex;
@@ -70,19 +108,19 @@
 .dato-der {
     position: absolute;
     z-index: 2;
-    font-size: 1.1rem;
+    font-size: var(--font-size-h3-secundario-esc);
     font-weight: 700;
     color: var(--clr-corporativo-blanco);
 }
 
 .dato-izq {
-    left: -35px;
-    top: 15%;
+    left: -45px;
+    top: 85%;
 }
 
 .dato-der {
-    right: -35px;
-    bottom: 15%;
+    right: -45px;
+    bottom: 85%;
 }
 
 /* Leyenda */
@@ -99,22 +137,22 @@
 }
 
 .cuadrito {
-    width: 25px;
-    height: 25px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 4px;
 }
 
-.lila-claro {
-    background-color: var(--clr-corporativo-lavanda-low);
+.rosa-claro {
+    background-color: var(--clr-corporativo-secundario-rosa-claro);
 }
 
 .lila-oscuro {
-    background-color: #3d2b5e;
+    background-color: var(--clr-corporativo-lavanda-low);
 }
 
-/* Color ajustado a la imagen */
 
 .leyenda-txt {
+    /* no tengo variable para esto y ningún otro tiene este font-size */
     font-size: 0.65rem;
     letter-spacing: 0.1rem;
     color: var(--clr-corporativo-primario-lila);
@@ -130,11 +168,16 @@
 }
 
 .info-auxiliar {
-    font-size: 0.7rem;
+    font-size: var(--font-size-label);
     color: var(--clr-corporativo-primario-lila);
     opacity: 0.6;
     text-align: center;
-    margin-top: -1rem;
+    margin-top: .01rem;
+
+}
+
+.emoji {
+    width: 2rem;
 }
 
 /* Grid de Hilos */
@@ -148,7 +191,7 @@
 .hilo-card {
     border: 1px solid var(--clr-corporativo-lavanda-low);
     border-radius: 12px;
-    min-height: 120px;
+    min-height: 7.5rem;
     padding: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -173,7 +216,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--clr-corporativo-primario-lila);
     font-weight: 700;
     letter-spacing: 0.1rem;
 }
@@ -188,26 +231,10 @@
 .hilo-cita {
     font-size: 0.7rem;
     line-height: 1.4;
-    color: var(--clr-corporativo-blanco);
+    color: var(--clr-corporativo-primario-lila);
     font-weight: 300;
 }
 
-/* Ajuste Responsive */
-@media (max-width: 600px) {
-    .grid-hilos {
-        grid-template-columns: 1fr;
-    }
-
-    .grafico-row {
-        flex-direction: column;
-    }
-
-    .dato-izq,
-    .dato-der {
-        position: static;
-        margin: 5px;
-    }
-}
 
 /* Icono de corazón para la vista de guardados */
 .icon-corazon {

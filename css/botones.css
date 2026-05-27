@@ -2,25 +2,33 @@
 
 /* BOTÓN GUARDAR CAMBIOS */
 .btn-guardar-cambios {
-    margin-top: 1.5rem;
+    margin-top: 1.8rem;
     background: transparent;
-    border: 1.5px solid var(--clr-corporativo-lavanda-low);
-    color: var(--clr-corporativo-blanco);
-    padding: 0.7rem 2rem;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    color: var(--clr-corporativo-primario-lila);
+    padding: 0.75rem 2.5rem;
+    border-radius: 50px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+
+    text-transform: uppercase;
+
     cursor: pointer;
     align-self: center;
-    transition: all 0.3s;
-    background: linear-gradient(180deg, rgba(212, 190, 228, 0.1) 0%, rgba(212, 190, 228, 0.05) 100%);
+    transition: background-color 0.25s, color 0.25s, box-shadow 0.25s, border-color 0.25s;
+    box-shadow: 0 0 5px var(--clr-corporativo-lavanda-low);
 }
 
 .btn-guardar-cambios:hover {
-    background: var(--clr-corporativo-lavanda-low);
-    color: var(--clr-corporativo-fondo-darker);
+    background-color: rgba(212, 190, 228, 0.08);
+
+    color: var(--clr-corporativo-blanco);
+    border-color: hsla(268, 33%, 78%, 0.6);
     box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
+
 }
 
 /* BOTÓN VOLVER */
@@ -42,6 +50,7 @@
     border-radius: 25px;
     font-weight: 700;
     cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* BOTÓN PAGAR */
@@ -72,20 +81,28 @@
 
 /* BOTÓN SEGUIR */
 .btn-seguir {
-    background-color: var(--clr-corporativo-lavanda-low);
-    color: var(--clr-corporativo-fondo-darker);
-    border: none;
-    padding: 0.6rem 2.5rem;
-    border-radius: 6px;
-    font-weight: 800;
+    border: 1px solid var(--clr-corporativo-lavanda-low);
+    background: transparent;
+    padding: 0.65rem 2.5rem;
+    border-radius: 20px;
+    color: var(--clr-corporativo-primario-lila);
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.75rem;
-    margin: 1rem 0;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: box-shadow 0.2s, color 0.2s, border-color 0.2s, background-color 0.2s;
+    box-shadow: 0 0 5px var(--clr-corporativo-lavanda-low);
+    animation: aparecer 0.5s 0.2s ease both;
+    margin: 1rem 0;
 }
 
 .btn-seguir:hover {
-    background: var(--clr-corporativo-blanco);
-    transform: scale(1.05);
+    background-color: rgba(212, 190, 228, 0.08);
+    box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
+    color: var(--clr-corporativo-blanco);
+    border-color: hsla(268, 33%, 78%, 0.6);
 }
 
 /* BOTÓN EDITAR */
@@ -146,13 +163,13 @@
     font-weight: 700;
     color: var(--clr-corporativo-fondo-darker);
     cursor: pointer;
-    transition: background 0.25s, transform 0.15s, box-shadow 0.25s;
+    transition: background-color 0.25s, transform 0.15s, box-shadow 0.25s;
     box-shadow: 0 0 16px hsla(315, 39%, 72%, 0.3);
     margin-top: 0.5rem;
 }
 
 .btn-mejorar:hover {
-    background: var(--clr-corporativo-primario-lila);
+    background-color: var(--clr-corporativo-primario-lila);
     transform: translateY(-1px);
     box-shadow: 0 0 28px hsla(315, 39%, 72%, 0.45);
 }
@@ -205,8 +222,10 @@
     cursor: pointer;
     transition: transform 0.2s, border-color 0.2s;
     border-radius: 50%;
-    padding: 5px;
+    padding: 7px;
     filter: grayscale(100%) opacity(0.7);
+    width: 3rem;
+    height: 3rem;
 }
 
 .btn-emoji:hover {
@@ -220,7 +239,7 @@
     position: relative;
     z-index: 2;
     width: 13rem;
-    height: 11rem;
+    height: 13rem;
     border-radius: 50%;
     border: 1px solid var(--clr-corporativo-lavanda-low);
     background: var(--clr-corporativo-fondo-darker);
@@ -234,7 +253,7 @@
     justify-content: center;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
-    margin-right: 15rem;
+
 }
 
 .respiracion-btn:hover {
@@ -266,7 +285,7 @@
 }
 
 /* CTA CENTRO DE AYUDA */
-.centro-ayuda-cta-btn {
+.contacto-cta-btn {
     background: transparent;
     border: 1px solid var(--clr-corporativo-lavanda-low);
     border-radius: 50px;
@@ -280,14 +299,14 @@
     transition: border-color 0.25s, color 0.25s, box-shadow 0.25s, transform 0.15s;
 }
 
-.centro-ayuda-cta-btn:hover {
+.contacto-cta-btn:hover {
     border-color: var(--clr-corporativo-secundario-rosa-claro);
     color: var(--clr-corporativo-secundario-rosa-claro);
     box-shadow: 0 0 20px var(--clr-corporativo-lavanda-low);
     transform: translateY(-1px);
 }
 
-.centro-ayuda-cta-btn:active {
+.contacto-cta-btn:active {
     transform: translateY(0);
 }
 
@@ -419,7 +438,7 @@ a .login-btn-email {
     border-radius: 50px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: var(--font-size-parrafo-esc);
-    font-weight: 600;
+    font-weight: 900;
     color: var(--clr-corporativo-secundario-rosa-claro);
     cursor: pointer;
     letter-spacing: 0.08rem;
@@ -439,7 +458,9 @@ a .login-btn-email {
 }
 
 .plan-btn-destacado {
-    background: hsla(315, 39%, 72%, 0.12);
+    background: var(--clr-corporativo-secundario-melocotón);
+    color: var(--clr-corporativo-secundario-rosa-medio);
+    border: 3px solid var(--clr-corporativo-secundario-rosa-medio);
 }
 
 /* BOTÓN ACOMPAÑAMIENTO */

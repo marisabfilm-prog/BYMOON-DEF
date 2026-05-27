@@ -2,6 +2,7 @@
 header {
     padding: 2rem 4rem;
     border-bottom: 1px solid var(--clr-corporativo-lavanda-low);
+    position: relative;
 }
 
 /* LOGO */
@@ -19,31 +20,115 @@ header {
     height: auto;
 }
 
-
-
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 1.5rem;
-    }
-
-    .logo {
-        width: 6.7rem;
-        height: auto;
-
-
-        .icono-perfil {
-            width: 20px;
-            height: auto;
-        }
-    }
-
+.perfil-link {
+    cursor: pointer;
 }
 
-/* NAV */
+/* HEADER LEFT - HAMBURGUESA Y LOGO */
+.header-left {
+    gap: 1.5rem;
+}
+
+/* no se ve en desktop */
+/* Contenedor del botón hamburguesa */
+.menu-toggle {
+    display: none;
+    /* Invisible en desktop */
+    flex-direction: column;
+    /* Las líneas en columna */
+    gap: 0px;
+    /* Sin espacio entre líneas */
+    background: none;
+    /* Sin fondo */
+    border: none;
+    /* Sin borde */
+    cursor: pointer;
+    /* Cursor de mano */
+    z-index: 102;
+    /* Encima del menú */
+    padding: 10px;
+    /* Espacio interno */
+    position: relative;
+    /* Para posicionar los span absolutos */
+    width: 45px;
+    /* Ancho del contenedor */
+    height: 45px;
+    /* Alto del contenedor */
+    display: flex;
+    /* Duplicado: flexbox */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+}
+
+/* Las tres líneas de la hamburguesa */
+.menu-toggle span {
+    width: 25px;
+    /* Ancho de cada línea */
+    height: 2px;
+    /* Grosor de la línea */
+    background: var(--clr-corporativo-primario-lila);
+    /* Color */
+    transition: all 0.3s ease;
+    /* Animación suave */
+    position: absolute;
+    /* Posicionamiento absoluto */
+}
+
+/* Primera línea (arriba) */
+.menu-toggle span:nth-child(1) {
+    top: 12px;
+    /* 12px desde arriba */
+}
+
+/* Segunda línea (centro) */
+.menu-toggle span:nth-child(2) {
+    top: 50%;
+    /* Centrada verticalmente */
+    transform: translateY(-50%);
+    /* Ajuste para centrar */
+}
+
+/* Tercera línea (abajo) */
+.menu-toggle span:nth-child(3) {
+    bottom: 12px;
+    /* 12px desde abajo */
+}
+
+/* CUANDO ESTÁ ACTIVO (menú abierto) */
+
+/* Primera línea se rota 45° y sube al centro */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(0);
+    top: 50%;
+}
+
+/* Segunda línea desaparece */
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    /* Invisible pero ocupa espacio */
+}
+
+/* Tercera línea se rota -45° y baja al centro */
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(0);
+    bottom: 50%;
+}
+
+/* NAV - DESKTOP */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+    justify-content: center;
+}
+
 nav a {
     color: var(--clr-corporativo-primario-lila);
     text-decoration: none;
-    margin-left: 2rem;
+    margin: 0 2rem;
     font-size: var(--font-size-nav);
     letter-spacing: 0.1rem;
     font-weight: 400;
@@ -69,13 +154,71 @@ nav .btn:hover {
     color: var(--clr-corporativo-blanco);
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    nav a {
-        display: none;
+    header {
+        padding: 1rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-    nav a:last-child {
+    .logo {
+        width: 6.7rem;
+        height: auto;
+        margin-top: 0.4rem;
+    }
+
+    .icono-perfil {
+        width: 1.25rem;
+        height: auto;
+        margin-top: 0.35rem;
+    }
+
+    /* MOSTRAR HAMBURGUESA EN MÓVIL */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .header-left {
+        gap: 1rem;
+    }
+
+    /* NAV EN MÓVIL - OCULTO POR DEFECTO, PANTALLA COMPLETA */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--clr-corporativo-fondo-dark);
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        z-index: 50;
+        border: none;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav.active {
+        max-height: 100vh;
+        padding: 2rem;
+    }
+
+    nav a {
+        margin: 0 !important;
+        font-size: 1.5rem;
         display: block;
+        text-align: center;
+    }
+
+    .perfil-link {
+        order: 3;
     }
 }
 

@@ -28,42 +28,42 @@
     /* MÓVIL */
 
     /* H1 Principal */
-    --font-size-h1-principal: 2.125rem;
+    --font-size-h1-principal-mobile: 2.125rem;
     /* 34px */
 
 
     /* H1 Secundario */
-    --font-size-h1-secundario: 1.5rem;
+    --font-size-h1-secundario-mobile: 1.5rem;
     /* 24px */
 
 
     /* H2 */
-    --font-size-h2: 1.5rem;
+    --font-size-h2-mobile: 1.5rem;
     /* 24px */
 
 
     /* H3 */
-    --font-size-h3: 1.25rem;
+    --font-size-h3-mobile: 1.25rem;
     /* 20px */
 
 
     /* Párrafo */
-    --font-size-parrafo: 1rem;
+    --font-size-parrafo-mobile: 1rem;
     /* 16px */
 
 
     /* Párrafo Footer */
-    --font-size-parrafo-footer: 0.75rem;
+    --font-size-parrafo-footer-mobile: 0.75rem;
     /* 12px */
 
 
     /* Botón */
-    --font-size-boton: 1.125rem;
+    --font-size-boton-mobile: 1.125rem;
     /* 18px */
 
 
     /* Botón Small */
-    --font-size-boton-small: 0.75rem;
+    --font-size-boton-small-mobile: 0.75rem;
     /* 12px */
 
     /* ESCRITORIO */
@@ -107,7 +107,7 @@
 
     /* H3 Secundario Esc */
     --font-size-h3-secundario-esc: 1.125rem;
-    /* 30px */
+    /* 18px */
 
     /* H1 Secundario Esc */
     --font-size-h1-secundario-esc: 1.875rem;
@@ -116,6 +116,9 @@
     /* H1 Terciario */
     --font-size-h1-terciario: 3.125rem;
     /* 50px */
+
+    /* Acciones comentarios */
+    --font-size-comentarios: 0.9rem;
 
     /* Label */
     --font-size-label: 0.75rem;
@@ -136,10 +139,7 @@ html {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--clr-corporativo-primario-lila);
     background: var(--clr-corporativo-fondo-dark);
-}
-
-main {
-    min-height: 200vh;
+    scroll-behavior: smooth;
 }
 
 

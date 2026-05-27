@@ -1,12 +1,7 @@
 /* ── BODY OVERRIDE (fondo claro) ── */
 body {
-    background: hsl(240, 40%, 94%);
-    background-image:
-        repeating-linear-gradient(to right,
-            hsla(260, 30%, 70%, 0.12) 0px,
-            hsla(260, 30%, 70%, 0.12) 1px,
-            transparent 1px,
-            transparent 60px);
+    background: var(--clr-corporativo-blanco);
+    padding: 2rem 4rem;
 }
 
 /* ── MAIN ── */
@@ -14,8 +9,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2rem 6rem;
-    min-height: calc(100vh - 100px);
+    padding: 3rem 2rem 0 2rem;
+    min-height: 100vh;
+}
+
+.logo {
+    width: 10rem;
+    height: auto;
 }
 
 /* ── STEPPER ── */
@@ -24,18 +24,19 @@ main {
     align-items: flex-start;
     justify-content: center;
     position: relative;
+    /* Los elementos como los botones, los inputs, los selects o tu stepper nativo tienen un comportamiento estándar que dice: "Solo voy a ocupar el ancho mínimo necesario para que se vea mi contenido (el número y las flechas)" . Por eso lo pongo: */
     width: 100%;
-    max-width: 500px;
     margin-bottom: 3rem;
 }
 
 .stepper-linea {
     position: absolute;
-    top: 9px;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: hsla(260, 20%, 60%, 0.35);
+    top: .6rem;
+    left: 5rem;
+    right: 5rem;
+    height: 1.5px;
+    --clr-corporativo-fondo-dark: hsl(262, 63%, 8%, .1);
+    background: var(--clr-corporativo-fondo-dark);
     z-index: 0;
 }
 
@@ -44,42 +45,42 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    flex: 1;
+    width: 100%;
     position: relative;
     z-index: 1;
 }
 
 .stepper-circulo {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     border-radius: 50%;
-    background: hsla(260, 20%, 75%, 0.5);
+    background: var(--clr-corporativo-primario-lila);
     border: 2px solid hsla(260, 20%, 65%, 0.4);
     transition: background 0.3s, border-color 0.3s;
 }
 
 .stepper-paso-activo .stepper-circulo {
-    background: hsl(260, 30%, 55%);
-    border-color: hsl(260, 30%, 45%);
+    background: var(--clr-corporativo-secundario-rosa-medio);
+    border-color: var(--clr-corporativo-secundario-rosa-claro);
 }
 
 .stepper-label {
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
+    font-size: var(--font-size-label);
+    font-weight: 500;
+    letter-spacing: .1rem;
     text-transform: uppercase;
-    color: hsl(260, 20%, 50%);
+    color: var(--clr-corporativo-fondo-dark);
 }
 
 .stepper-paso-activo .stepper-label {
-    color: hsl(260, 30%, 35%);
-    font-weight: 600;
+    color: var(--clr-corporativo-fondo-darker);
+    font-weight: 700;
 }
 
 /* ── WRAP CONTENIDO ── */
 .plan-wrap {
     width: 100%;
-    max-width: 500px;
+    max-width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,35 +93,35 @@ main {
     font-size: var(--font-size-h2-secundario-esc);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.35rem;
-    color: hsl(260, 40%, 25%);
+    letter-spacing: .35rem;
+    color: var(--clr-corporativo-fondo-darker);
     margin-bottom: 2rem;
 }
 
 /* ── PLAN SELECCIONADO ── */
 .plan-seleccionado-label {
-    font-size: 0.75rem;
+    font-size: var(--font-size-label);
     font-weight: 400;
-    letter-spacing: 0.15rem;
+    letter-spacing: .15rem;
     text-transform: uppercase;
-    color: hsl(260, 20%, 50%);
-    margin-bottom: 0.4rem;
+    color: var(--clr-corporativo-fondo-dark);
+    margin-bottom: .6rem;
 }
 
 .plan-seleccionado-nombre {
-    font-size: var(--font-size-parrafo-esc);
+    font-size: var(--font-size-h3-secundario-esc);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    color: hsl(260, 40%, 25%);
-    margin-bottom: 0.6rem;
+    letter-spacing: .2rem;
+    color: var(--clr-corporativo-fondo-darker);
+    margin-bottom: .6rem;
 }
 
 .plan-modalidad-label {
     font-size: var(--font-size-parrafo);
     font-weight: 300;
-    color: hsl(260, 20%, 45%);
-    letter-spacing: 0.05rem;
+    color: var(--clr-corporativo-fondo-dark);
+    letter-spacing: .05rem;
     margin-bottom: 1.5rem;
 }
 
@@ -135,62 +136,379 @@ main {
     flex: 1;
     border: 1px solid hsla(260, 20%, 65%, 0.4);
     border-radius: 16px;
-    background: hsla(0, 0%, 100%, 0.6);
-    backdrop-filter: blur(8px);
+    background: var(--clr-corporativo-primario-lila);
     padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.6rem;
+    gap: .6rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .plan-modalidad:hover {
-    border-color: hsl(260, 30%, 55%);
+    border-color: var(--clr-corporativo-fondo-darker);
     box-shadow: 0 4px 24px hsla(260, 30%, 55%, 0.15);
 }
 
 /* ── TIPO ── */
 .plan-modalidad-tipo {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.2rem;
+    font-size: var(--font-size-h3-secundario-esc);
+    font-weight: 900;
+    letter-spacing: .2rem;
     text-transform: uppercase;
-    color: hsl(260, 30%, 40%);
-    margin-bottom: 0.4rem;
+    color: var(--clr-corporativo-fondo-darker);
+    margin-bottom: .4rem;
 }
 
 /* ── PRECIOS ── */
 .plan-modalidad-precio {
-    font-size: 1.1rem;
+    font-size: var(--font-size-parrafo-esc);
     font-weight: 700;
-    color: hsl(260, 40%, 25%);
-    letter-spacing: 0.05rem;
+    color: var(--clr-corporativo-fondo-darker);
+    letter-spacing: .05rem;
 }
 
 .plan-modalidad-precio-destacado {
     font-size: 1.1rem;
     font-weight: 700;
-    color: hsl(260, 40%, 25%);
-    letter-spacing: 0.05rem;
+    color: var(--clr-corporativo-fondo-darker);
+    letter-spacing: .05rem;
 }
 
-.plan-modalidad-nota {
-    font-size: 0.78rem;
+
+
+
+
+/* SUSCRIPCION 2 */
+
+h1 {
+    font-size: var(--font-size-h1-secundario-esc);
+    color: var(--clr-corporativo-fondo-darker);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+/* ── WRAP CONTENIDO ── */
+.pago-wrap {
+    width: 100%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    animation: aparecer 0.6s ease both;
+}
+
+/* ── FIELDSET ── */
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-size: var(--font-size-label);
+    font-weight: 500;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: var(--clr-corporativo-fondo-dark);
+    margin-bottom: 1rem;
+}
+
+/* ── CAMPOS ── */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin-bottom: 1rem;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+.campo label {
+    font-size: var(--font-size-label);
+    font-weight: 500;
+    letter-spacing: .05rem;
+    color: var(--clr-corporativo-fondo-dark);
+}
+
+.campo .opcional {
     font-weight: 300;
-    color: hsl(260, 20%, 50%);
-    line-height: 1.5;
-    text-align: center;
+    font-size: var(--font-size-label);
+    color: var(--clr-corporativo-fondo-dark);
+    opacity: .6;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-    .plan-modalidades {
-        flex-direction: column;
-    }
+.campo input,
+.campo textarea {
+    /* El elemento hereda la fuente de su elemento padre, en lugar de usar la fuente por defecto del navegador. */
+    font-family: inherit;
+    font-size: var(--font-size-parrafo);
+    color: var(--clr-corporativo-fondo-darker);
+    background: var(--clr-corporativo-primario-lila);
+    border: 1px solid var(--clr-corporativo-fondo-dark);
+    border-radius: 12px;
+    padding: .75rem 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color .2s;
+}
 
-    .plan-titulo {
-        font-size: 1.4rem;
-        letter-spacing: 0.2rem;
-    }
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--clr-corporativo-primario-lila);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: var(--clr-corporativo-fondo-dark);
+    opacity: .4;
+}
+
+/* ── FILA DOS COLUMNAS ── */
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ── MÉTODOS DE PAGO ── */
+.metodos {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.metodo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--clr-corporativo-fondo-dark);
+    border-radius: 16px;
+    background: var(--clr-corporativo-primario-lila);
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.metodo:hover {
+    border-color: var(--clr-corporativo-fondo-darker);
+    box-shadow: 0 4px 24px hsla(260, 30%, 55%, 0.15);
+}
+
+/* el <label> envuelve al <input type="radio">,
+así toda la tarjeta es clickable. En el CSS tienes dos estados: .metodo con el estilo base y .metodo.activo con el borde rosa, que al principio se la pones manualmente al primero en el HTML con checked. Luego el JS escucha el evento change de cada radio y cuando se dispara hace dos cosas: quita .activo de todos los .metodo y se la añade al que acaba de cambiar usando radio.closest('.metodo'),
+que sube por el DOM desde el <input> hasta encontrar su <label> padre. */
+
+.metodo.activo {
+    border-color: var(--clr-corporativo-secundario-rosa-medio);
+    box-shadow: 0 4px 24px hsla(260, 30%, 55%, 0.15);
+}
+
+.metodo input {
+    accent-color: var(--clr-corporativo-secundario-rosa-medio);
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* selector de hijo directo: */
+
+.metodo>span {
+    font-size: var(--font-size-parrafo);
+    font-weight: 500;
+    color: var(--clr-corporativo-fondo-darker);
+    flex: 1;
+    letter-spacing: .05rem;
+}
+
+.logo-pago {
+    height: 1.25rem;
+    width: auto;
+}
+
+/* ── CAMPOS TARJETA ── */
+.campos-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+    --clr-corporativo-primario-lila: hsl(260, 30%, 83%, .3);
+    background: var(--clr-corporativo-primario-lila);
+    border-radius: 12px;
+    margin-top: -.25rem;
+}
+
+.campos-tarjeta .campo {
+    margin-bottom: 0;
+}
+
+/* ── TÉRMINOS ── */
+.terminos {
+    display: flex;
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* El checkbox tiene flex-shrink: 0 para que no se encoja si el texto no es largo,
+margin-top: 2px para alinearlo visualmente con la primera línea del texto (sin ese ajuste quedaría demasiado arriba), y accent-color para cambiar el color nativo del checkbox al rosa corporativo. */
+
+.terminos input {
+    accent-color: var(--clr-corporativo-secundario-rosa-medio);
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.terminos label {
+    font-size: var(--font-size-label);
+    font-weight: 300;
+    color: var(--clr-corporativo-fondo-dark);
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.terminos a {
+    color: var(--clr-corporativo-fondo-darker);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── PRECIO RESUMEN ── */
+.precio-resumen {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 700;
+    color: var(--clr-corporativo-fondo-darker);
+    letter-spacing: .05rem;
+    margin-bottom: 1rem;
+}
+
+.precio-resumen span {
+    font-weight: 300;
+    font-size: var(--font-size-comentarios);
+    opacity: .7;
+}
+
+/* ── NOTAS DE SEGURIDAD ── */
+.notas-seguridad {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.notas-seguridad p {
+    font-size: var(--font-size-label);
+    font-weight: 300;
+    color: var(--clr-corporativo-fondo-dark);
+    opacity: .7;
+    letter-spacing: .03rem;
+}
+
+
+
+
+
+/* SUSCRIPCIÓN 3 */
+
+.conf-wrap {
+    width: 100%;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: aparecer 0.6s ease both;
+}
+
+/* ── TÍTULO ── */
+.conf-titulo {
+    font-size: var(--font-size-h2-secundario-esc);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: var(--clr-corporativo-primario);
+    margin-bottom: 0.9rem;
+    line-height: 1.2;
+}
+
+/* ── SUBTÍTULO ── */
+.conf-subtitulo {
+    font-size: var(--font-size-parrafo-esc);
+    font-weight: 300;
+    color: var(--clr-corporativo-primario);
+    letter-spacing: 0.03rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* ── DETALLES DEL PLAN ── */
+.conf-detalles-titulo {
+    font-size: var(--font-size-label);
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--clr-corporativo-primario);
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.conf-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    padding: 0;
+}
+
+.conf-lista li {
+    font-size: var(--font-size-parrafo);
+    font-weight: 400;
+    color: var(--clr-corporativo-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+
+.det-label {
+    font-weight: 700;
+    color: var(--clr-corporativo-primario);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ── NOTA ── */
+.conf-nota {
+    font-size: var(--font-size-comentarios);
+    font-weight: 400;
+    color: var(--clr-corporativo-primario);
+    line-height: 1.7;
+    letter-spacing: 0.02rem;
+}
+
+.conf-nota strong {
+    font-weight: 700;
+    color: var(--clr-corporativo-primario);
+}
+
+.conf-nota a {
+    color: var(--clr-corporativo-primario);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+}
+
+.conf-nota a:hover {
+    color: var(--clr-corporativo-fondo-dark);
 }

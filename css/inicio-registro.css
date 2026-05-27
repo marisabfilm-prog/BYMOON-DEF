@@ -1,19 +1,11 @@
-/* ── LOGIN CARD ── */
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    min-height: calc(100vh - 100px);
-}
-
 .login-card {
     width: 100%;
-    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     animation: aparecer 0.7s ease both;
+    padding: 4rem 2rem;
 }
 
 @keyframes aparecer {
@@ -51,11 +43,13 @@ main {
 .login-input-wrap {
     width: 100%;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .login-input {
-    width: 100%;
-    background: hsla(265, 60%, 10%, 0.7);
+    width: 60%;
+    background: var(--clr-corporativo-fondo-darker);
     border: 1px solid var(--clr-corporativo-lavanda-low);
     border-radius: 14px;
     padding: 1.2rem 1.6rem;
@@ -64,12 +58,11 @@ main {
     color: var(--clr-corporativo-primario-lila);
     outline: none;
     transition: border-color 0.25s, box-shadow 0.25s;
-    backdrop-filter: blur(8px);
     letter-spacing: 0.03rem;
 }
 
 .login-input::placeholder {
-    color: hsla(260, 30%, 83%, 0.35);
+    color: var(--clr-corporativo-lavanda-low);
 }
 
 .login-input:focus {
@@ -94,11 +87,10 @@ main {
 }
 
 .login-divisor-luna {
-    width: 10px;
-    height: 10px;
+    width: .5rem;
+    height: .5rem;
     border-radius: 50%;
     border: 1px solid var(--clr-corporativo-lavanda-low);
-    flex-shrink: 0;
 }
 
 /* ── BOTONES SOCIALES ── */
@@ -106,17 +98,14 @@ main {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    width: 100%;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-    main {
-        padding: 3rem 1.5rem;
-    }
+.google {
+    width: 2rem;
+    height: auto;
+}
 
-    .login-titulo {
-        font-size: 1.5rem;
-        letter-spacing: 0.2rem;
-    }
+.apple {
+    width: 2rem;
+    height: auto;
 }

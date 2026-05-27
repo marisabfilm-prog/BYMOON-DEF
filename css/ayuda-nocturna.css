@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 12rem;
 }
 
 .respiracion-anillos {
@@ -57,21 +58,21 @@
 .anillo-1 {
     width: 17.5rem;
     height: 17.5rem;
-    margin-right: 15rem;
+
 }
 
 .anillo-2 {
     width: 24rem;
     height: 24rem;
     opacity: 0.6;
-    margin-right: 15rem;
+
 }
 
 .anillo-3 {
     width: 30rem;
     height: 30rem;
     opacity: 0.35;
-    margin-right: 15rem;
+   
 }
 
 @keyframes respirar {
@@ -120,13 +121,13 @@
     text-align: center;
     max-width: 100%;
     letter-spacing: 0.05rem;
-    margin-top: 4rem;
-    margin-right: 15rem;
+    margin-top: 6rem;
+    
 }
 
 /* ── AUDIOS ── */
 .audios-section {
-    padding: 2rem 4rem 3rem 4rem;
+    padding: 0 4rem 3rem 4rem;
 }
 
 .audios-titulo {
@@ -254,35 +255,75 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+
+    /* ── TÍTULO ── */
+    .ayuda-titulo {
+        font-size: var(--font-size-h1-principal-mobile);
+        letter-spacing: 0.05rem;
+    }
+
+    .respiracion-texto .ayuda-subtitulo {
+        font-size: var(--font-size-parrafo-mobile);
+        margin-bottom: 8rem;
+    }
+
+    /* ── SECCIÓN ── */
     .respiracion-section {
         grid-template-columns: 1fr;
         padding: 3rem 1.5rem;
         text-align: center;
+  
     }
 
+    /* ── CENTRO ── */
+    .respiracion-centro {
+        margin-right: 0;
+        width: 100%;
+
+    }
+
+    /* ── ANILLOS ── */
     .respiracion-anillos {
-        width: 280px;
-        height: 280px;
+        width: 13.75rem;
+        height: 13.75rem;
+        margin: 0 auto;
     }
 
     .anillo-1 {
-        width: 180px;
-        height: 180px;
+        width: 12rem;
+        height: 12rem;
     }
 
     .anillo-2 {
-        width: 230px;
-        height: 230px;
+        width: 16rem;
+        height: 16rem;
     }
 
     .anillo-3 {
-        width: 280px;
-        height: 280px;
+        width: 20rem;
+        height: 20rem;
     }
 
+    /* ── BOTÓN RESPIRACIÓN ── */
+    .respiracion-btn {
+        width: 10rem;
+        height: 10rem;
+        font-size: var(--font-size-h1-secundario-mobile);
+    }
 
+    /* ── INSTRUCCIÓN ── */
+    .respiracion-instruccion {
+        font-size: var(--font-size-parrafo-mobile);
+        margin-top: 8rem;
+    }
+
+    /* ── AUDIOS ── */
     .audios-section {
-        padding: 2rem 1.5rem 3rem;
+        padding: 2rem 1.5rem 3rem 1.5rem;
+    }
+
+    .audios-titulo {
+        font-size: var(--font-size-h2-mobile);
     }
 
     .audios-row {
@@ -292,9 +333,18 @@
 
     .audio-card {
         width: 100%;
-        max-width: 340px;
+        max-width: 21.25rem;
     }
 
+    .audio-titulo {
+        font-size: var(--font-size-h3-mobile);
+    }
+
+    .audio-desc {
+        max-width: 100%;
+    }
+
+    /* ── AUDIOLIBRO ── */
     .audiolibro-section {
         padding: 1rem 1.5rem 3rem;
     }
@@ -302,4 +352,39 @@
     .audiolibro-caja {
         padding: 2.5rem 1.5rem;
     }
+
+    .audiolibro-titulo {
+        font-size: var(--font-size-h2-mobile);
+    }
+
+    .audiolibro-descrip {
+        font-size: var(--font-size-parrafo-mobile);
+        max-width: 100%;
+    }
+
+    .cta {
+        font-size: var(--font-size-boton-mobile)
+    }
+}
+
+
+/* ── ANIMACIONES ENTRADA ── */
+.animar {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos escalonados para las cards de audio */
+.audio-card:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.audio-card:nth-child(3) {
+    transition-delay: 0.3s;
 }

@@ -1,7 +1,7 @@
 const btn = document.querySelector('.respiracion-btn');
 const numero = document.querySelector('.respiracion-numero');
 const instruccion = document.querySelector('.respiracion-instruccion');
-const anillos = document.getElementById('respiracion');
+const anillos = document.querySelector('.respiracion-anillos');
 
 const fases = [
     { texto: 'Inhala...', duracion: 4 },
